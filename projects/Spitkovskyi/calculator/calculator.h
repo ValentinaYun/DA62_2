@@ -81,7 +81,7 @@ private slots:
     void setMemory();
     void addToMemory();
 
-private:
+public:
     Button *createButton(const QString &text, const char *member);
     void abortOperation();
     bool calculate(double rightOperand, const QString &pendingOperator);

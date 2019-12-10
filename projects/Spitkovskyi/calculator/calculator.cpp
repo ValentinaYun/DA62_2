@@ -55,8 +55,13 @@
 #include "button.h"
 #include "calculator.h"
 
-//! \class Calculator
-//! \brief Main calculating class
+
+/*!
+ \class Calculator
+ \brief Main calculating class
+ \since 1.0
+ \note nevermind
+*/
 Calculator::Calculator(QWidget *parent)
     : QWidget(parent)
 {
@@ -140,8 +145,6 @@ Calculator::Calculator(QWidget *parent)
     setWindowTitle(tr("Calculator"));
 }
 
-//! \class Calculator
-//! \brief callback on click on any digit
 void Calculator::digitClicked()
 {
     Button *clickedButton = qobject_cast<Button *>(sender());
@@ -156,8 +159,6 @@ void Calculator::digitClicked()
     display->setText(display->text() + QString::number(digitValue));
 }
 
-//! \class Calculator
-//! \brief callback on click on any unary operator
 void Calculator::unaryOperatorClicked()
 {
     Button *clickedButton = qobject_cast<Button *>(sender());
@@ -184,8 +185,6 @@ void Calculator::unaryOperatorClicked()
     waitingForOperand = true;
 }
 
-//! \class Calculator
-//! \brief callback on click on any additive operator
 void Calculator::additiveOperatorClicked()
 {
     Button *clickedButton = qobject_cast<Button *>(sender());
@@ -216,8 +215,6 @@ void Calculator::additiveOperatorClicked()
     waitingForOperand = true;
 }
 
-//! \class Calculator
-//! \brief callback on click on any multiplicative operator
 void Calculator::multiplicativeOperatorClicked()
 {
     Button *clickedButton = qobject_cast<Button *>(sender());
@@ -238,8 +235,6 @@ void Calculator::multiplicativeOperatorClicked()
     waitingForOperand = true;
 }
 
-//! \class Calculator
-//! \brief callback on click on equal
 void Calculator::equalClicked()
 {
     double operand = display->text().toDouble();
@@ -268,8 +263,6 @@ void Calculator::equalClicked()
     waitingForOperand = true;
 }
 
-//! \class Calculator
-//! \brief callback on click on point
 void Calculator::pointClicked()
 {
     if (waitingForOperand)
@@ -279,8 +272,6 @@ void Calculator::pointClicked()
     waitingForOperand = false;
 }
 
-//! \class Calculator
-//! \brief callback on click on change sign
 void Calculator::changeSignClicked()
 {
     QString text = display->text();
@@ -294,8 +285,6 @@ void Calculator::changeSignClicked()
     display->setText(text);
 }
 
-//! \class Calculator
-//! \brief callback on click on backspace
 void Calculator::backspaceClicked()
 {
     if (waitingForOperand)
@@ -310,8 +299,6 @@ void Calculator::backspaceClicked()
     display->setText(text);
 }
 
-//! \class Calculator
-//! \brief clear method
 void Calculator::clear()
 {
     if (waitingForOperand)
@@ -321,9 +308,6 @@ void Calculator::clear()
     waitingForOperand = true;
 }
 
-//! \class Calculator
-//! \brief clearall method
-//! \note clear all members
 void Calculator::clearAll()
 {
     sumSoFar = 0.0;
@@ -334,39 +318,29 @@ void Calculator::clearAll()
     waitingForOperand = true;
 }
 
-//! \class Calculator
-//! \brief clear memory method
 void Calculator::clearMemory()
 {
     sumInMemory = 0.0;
 }
 
-//! \class Calculator
-//! \brief read memory method
 void Calculator::readMemory()
 {
     display->setText(QString::number(sumInMemory));
     waitingForOperand = true;
 }
 
-//! \class Calculator
-//! \brief set memory method
 void Calculator::setMemory()
 {
     equalClicked();
     sumInMemory = display->text().toDouble();
 }
 
-//! \class Calculator
-//! \brief add to memory method
 void Calculator::addToMemory()
 {
     equalClicked();
     sumInMemory += display->text().toDouble();
 }
 
-//! \class Calculator
-//! \brief create button method
 Button *Calculator::createButton(const QString &text, const char *member)
 {
     Button *button = new Button(text);
@@ -374,16 +348,12 @@ Button *Calculator::createButton(const QString &text, const char *member)
     return button;
 }
 
-//! \class Calculator
-//! \brief abort any operation
 void Calculator::abortOperation()
 {
     clearAll();
     display->setText(tr("####"));
 }
 
-//! \class Calculator
-//! \brief calculate method
 bool Calculator::calculate(double rightOperand, const QString &pendingOperator)
 {
     if (pendingOperator == tr("+")) {
