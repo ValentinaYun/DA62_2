@@ -1,0 +1,20 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="app::record_pull::crt\l_record",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classapp_1_1record__pull.html#ac98e1a304aa69cf91d6ed74f8310b598",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="app::record_pull::instance",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classapp_1_1record__pull.html#aca123daa62df534d32ed1709374d063c",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="agnostic::record_handler\l::get_id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structagnostic_1_1record__handler.html#ad065a1b093be5c7cbcd22f4318eb356f",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="app::record_pull::get\l_record",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classapp_1_1record__pull.html#a3c1f4f47bdc7186f021d213c997d900d",tooltip=" "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="agnostic::record_handler\l::set_data",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structagnostic_1_1record__handler.html#ae3aacfeee6c36c9029738bf2f6fc8160",tooltip=" "];
+}

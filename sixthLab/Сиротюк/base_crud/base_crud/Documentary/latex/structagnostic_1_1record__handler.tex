@@ -1,0 +1,72 @@
+\hypertarget{structagnostic_1_1record__handler}{}\doxysection{agnostic\+::record\+\_\+handler Struct Reference}
+\label{structagnostic_1_1record__handler}\index{agnostic::record\_handler@{agnostic::record\_handler}}
+
+
+Structure that used to wrap platform dependant record realization.  
+
+
+
+
+{\ttfamily \#include $<$record.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structagnostic_1_1record__handler_a4d448e262e1ddcc55a32c0eddc675d67}{record\+\_\+handler}} (const uint32\+\_\+t id, \mbox{\hyperlink{structapp_1_1record}{app\+::record}} \&record)
+\item 
+const char $\ast$ \mbox{\hyperlink{structagnostic_1_1record__handler_a1ac598a8fcbd14a0e383acd271db3adf}{get\+\_\+data}} () const
+\item 
+void \mbox{\hyperlink{structagnostic_1_1record__handler_ae3aacfeee6c36c9029738bf2f6fc8160}{set\+\_\+data}} (const char $\ast$data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structagnostic_1_1record__handler_ad065a1b093be5c7cbcd22f4318eb356f}{get\+\_\+id}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure that used to wrap platform dependant record realization. 
+
+Structure containt the adress of record and it index in the global record table \char`\"{}record\+\_\+pull\char`\"{}. Thread unsafe. \begin{DoxyWarning}{Warning}
+Only this interface allowed to interact with record through. Direct interactions with record struct can broke up everything. 
+\end{DoxyWarning}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structagnostic_1_1record__handler_a4d448e262e1ddcc55a32c0eddc675d67}\label{structagnostic_1_1record__handler_a4d448e262e1ddcc55a32c0eddc675d67}} 
+\index{agnostic::record\_handler@{agnostic::record\_handler}!record\_handler@{record\_handler}}
+\index{record\_handler@{record\_handler}!agnostic::record\_handler@{agnostic::record\_handler}}
+\doxysubsubsection{\texorpdfstring{record\_handler()}{record\_handler()}}
+{\footnotesize\ttfamily agnostic\+::record\+\_\+handler\+::record\+\_\+handler (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{id,  }\item[{\mbox{\hyperlink{structapp_1_1record}{app\+::record}} \&}]{record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structagnostic_1_1record__handler_a1ac598a8fcbd14a0e383acd271db3adf}\label{structagnostic_1_1record__handler_a1ac598a8fcbd14a0e383acd271db3adf}} 
+\index{agnostic::record\_handler@{agnostic::record\_handler}!get\_data@{get\_data}}
+\index{get\_data@{get\_data}!agnostic::record\_handler@{agnostic::record\_handler}}
+\doxysubsubsection{\texorpdfstring{get\_data()}{get\_data()}}
+{\footnotesize\ttfamily const char$\ast$ agnostic\+::record\+\_\+handler\+::get\+\_\+data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structagnostic_1_1record__handler_ad065a1b093be5c7cbcd22f4318eb356f}\label{structagnostic_1_1record__handler_ad065a1b093be5c7cbcd22f4318eb356f}} 
+\index{agnostic::record\_handler@{agnostic::record\_handler}!get\_id@{get\_id}}
+\index{get\_id@{get\_id}!agnostic::record\_handler@{agnostic::record\_handler}}
+\doxysubsubsection{\texorpdfstring{get\_id()}{get\_id()}}
+{\footnotesize\ttfamily uint32\+\_\+t agnostic\+::record\+\_\+handler\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 0
+\mbox{\Hypertarget{structagnostic_1_1record__handler_ae3aacfeee6c36c9029738bf2f6fc8160}\label{structagnostic_1_1record__handler_ae3aacfeee6c36c9029738bf2f6fc8160}} 
+\index{agnostic::record\_handler@{agnostic::record\_handler}!set\_data@{set\_data}}
+\index{set\_data@{set\_data}!agnostic::record\_handler@{agnostic::record\_handler}}
+\doxysubsubsection{\texorpdfstring{set\_data()}{set\_data()}}
+{\footnotesize\ttfamily void agnostic\+::record\+\_\+handler\+::set\+\_\+data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 1
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{record_8h}{record.\+h}}\end{DoxyCompactItemize}

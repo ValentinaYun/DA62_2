@@ -1,0 +1,55 @@
+\hypertarget{structapp_1_1record}{}\doxysection{app\+::record Struct Reference}
+\label{structapp_1_1record}\index{app::record@{app::record}}
+
+
+Structure that used to typedef and hold real view of the user record.  
+
+
+
+
+{\ttfamily \#include $<$record.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structapp_1_1record_ad84006b9ce8f5cf49b17188d715957ad}{record}} (char $\ast$\mbox{\hyperlink{structapp_1_1record_af904cfbcd24131da88a51d5673428d41}{data}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{structapp_1_1record_af904cfbcd24131da88a51d5673428d41}{data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure that used to typedef and hold real view of the user record. 
+
+Structure containt pointer to char string. In our alpha (0.\+1) version we assume that data will be stored alongside with spacial characters that will tell how frontend must formate and represantate data on viewport. \begin{DoxyWarning}{Warning}
+Only \char`\"{}record\+\_\+handler\char`\"{} interface allowed to interact with record through. Direct interactions with record struct can broke up everything. 
+\end{DoxyWarning}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structapp_1_1record_ad84006b9ce8f5cf49b17188d715957ad}\label{structapp_1_1record_ad84006b9ce8f5cf49b17188d715957ad}} 
+\index{app::record@{app::record}!record@{record}}
+\index{record@{record}!app::record@{app::record}}
+\doxysubsubsection{\texorpdfstring{record()}{record()}}
+{\footnotesize\ttfamily app\+::record\+::record (\begin{DoxyParamCaption}\item[{char $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structapp_1_1record_af904cfbcd24131da88a51d5673428d41}\label{structapp_1_1record_af904cfbcd24131da88a51d5673428d41}} 
+\index{app::record@{app::record}!data@{data}}
+\index{data@{data}!app::record@{app::record}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily char$\ast$ app\+::record\+::data}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{record_8h}{record.\+h}}\end{DoxyCompactItemize}

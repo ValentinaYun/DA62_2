@@ -1,0 +1,92 @@
+\hypertarget{classapp_1_1record__pull}{}\doxysection{app\+::record\+\_\+pull Class Reference}
+\label{classapp_1_1record__pull}\index{app::record\_pull@{app::record\_pull}}
+
+
+Class that used to wrap all interactions with record register.  
+
+
+
+
+{\ttfamily \#include $<$record\+\_\+pull.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structagnostic_1_1record__handler}{agnostic\+::record\+\_\+handler}} \mbox{\hyperlink{classapp_1_1record__pull_ac98e1a304aa69cf91d6ed74f8310b598}{crt\+\_\+record}} ()
+\item 
+\mbox{\hyperlink{structagnostic_1_1record__handler}{agnostic\+::record\+\_\+handler}} \mbox{\hyperlink{classapp_1_1record__pull_a3c1f4f47bdc7186f021d213c997d900d}{get\+\_\+record}} (const uint32\+\_\+t idx)
+\item 
+void \mbox{\hyperlink{classapp_1_1record__pull_a0c90678b5652d6abf3ccec67ab621a8b}{set\+\_\+record}} (const \mbox{\hyperlink{structapp_1_1record}{app\+::record}} \&\mbox{\hyperlink{structapp_1_1record}{record}})
+\item 
+void \mbox{\hyperlink{classapp_1_1record__pull_a72cf81a1157cdac0c539b7cacd5ff35f}{dlt\+\_\+record}} (const uint32\+\_\+t idx)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classapp_1_1record__pull}{record\+\_\+pull}} \& \mbox{\hyperlink{classapp_1_1record__pull_aca123daa62df534d32ed1709374d063c}{instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class that used to wrap all interactions with record register. 
+
+Class contain record register that contain all records. That singleton does not allow to get real instance of the any record, but allow to obtain a handler to some record to interact with data, contained inside record. This decision was maked due to the platform agnostic ideology and also this is a good oportunity to creat our own allocation pull in order to obtain memory allocation speed up in future. \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Memory pool and memory allocation. Thread safety for handlers and generation non-\/blocking algorithm based on atomics memory bariers \end{DoxyRefDesc}
+\begin{DoxyWarning}{Warning}
+\char`\"{}record\+\_\+pull\char`\"{} operations thread-\/safe by themselfs, but operations with handlers are not. So be careful when update something directly throw handler. You should not deleta some data, when someone hold another handler to that recoed 
+\end{DoxyWarning}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classapp_1_1record__pull_ac98e1a304aa69cf91d6ed74f8310b598}\label{classapp_1_1record__pull_ac98e1a304aa69cf91d6ed74f8310b598}} 
+\index{app::record\_pull@{app::record\_pull}!crt\_record@{crt\_record}}
+\index{crt\_record@{crt\_record}!app::record\_pull@{app::record\_pull}}
+\doxysubsubsection{\texorpdfstring{crt\_record()}{crt\_record()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structagnostic_1_1record__handler}{agnostic\+::record\+\_\+handler}} app\+::record\+\_\+pull\+::crt\+\_\+record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{classapp_1_1record__pull_a72cf81a1157cdac0c539b7cacd5ff35f}\label{classapp_1_1record__pull_a72cf81a1157cdac0c539b7cacd5ff35f}} 
+\index{app::record\_pull@{app::record\_pull}!dlt\_record@{dlt\_record}}
+\index{dlt\_record@{dlt\_record}!app::record\_pull@{app::record\_pull}}
+\doxysubsubsection{\texorpdfstring{dlt\_record()}{dlt\_record()}}
+{\footnotesize\ttfamily void app\+::record\+\_\+pull\+::dlt\+\_\+record (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{classapp_1_1record__pull_a3c1f4f47bdc7186f021d213c997d900d}\label{classapp_1_1record__pull_a3c1f4f47bdc7186f021d213c997d900d}} 
+\index{app::record\_pull@{app::record\_pull}!get\_record@{get\_record}}
+\index{get\_record@{get\_record}!app::record\_pull@{app::record\_pull}}
+\doxysubsubsection{\texorpdfstring{get\_record()}{get\_record()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structagnostic_1_1record__handler}{agnostic\+::record\+\_\+handler}} app\+::record\+\_\+pull\+::get\+\_\+record (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+% FIG 3
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{classapp_1_1record__pull_aca123daa62df534d32ed1709374d063c}\label{classapp_1_1record__pull_aca123daa62df534d32ed1709374d063c}} 
+\index{app::record\_pull@{app::record\_pull}!instance@{instance}}
+\index{instance@{instance}!app::record\_pull@{app::record\_pull}}
+\doxysubsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classapp_1_1record__pull}{record\+\_\+pull}}\& app\+::record\+\_\+pull\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{classapp_1_1record__pull_a0c90678b5652d6abf3ccec67ab621a8b}\label{classapp_1_1record__pull_a0c90678b5652d6abf3ccec67ab621a8b}} 
+\index{app::record\_pull@{app::record\_pull}!set\_record@{set\_record}}
+\index{set\_record@{set\_record}!app::record\_pull@{app::record\_pull}}
+\doxysubsubsection{\texorpdfstring{set\_record()}{set\_record()}}
+{\footnotesize\ttfamily void app\+::record\+\_\+pull\+::set\+\_\+record (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structapp_1_1record}{app\+::record}} \&}]{record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+% FIG 6
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{record__pull_8h}{record\+\_\+pull.\+h}}\end{DoxyCompactItemize}
